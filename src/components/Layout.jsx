@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router";
 
+
 const linkStyle = ({ isActive }) => ({
   fontWeight: isActive ? "bold" : "normal",
   marginInline: 12,
@@ -11,6 +12,8 @@ export default function Layout() {
       <nav style={{ padding: 12, borderBottom: "1px solid #ccc" }}>
         <NavLink to="/" end style={linkStyle}>בית</NavLink>
         <NavLink to="/recipes" style={linkStyle}>מתכונים</NavLink>
+        <NavLink to="/login/Uncontrolled" style={linkStyle}>התחברות לא מבוקר</NavLink>
+        <NavLink to="/login/Rhf" style={linkStyle}>התחברות </NavLink>
       </nav>
       <main style={{ padding: 16 }}>
         <Outlet />

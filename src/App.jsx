@@ -5,7 +5,8 @@ import NotFound from "./pages/NotFound";
 import RecipesList from "./pages/RecipesList";
 // ↓ כאן כל אחת מוסיפה את ה־import שלה ↓
 import RecipeDetails from "./pages/RecipeDetails";
-
+import Uncontrolled from "./login/uncontrolled.jsx";
+import Rhf from "./login/rhf.jsx";
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
         {/* ↓ כאן כל אחת מוסיפה את ה־Route שלה ↓ */}
         <Route path="/recipes" element={<RecipesList />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <Route path="login/Uncontrolled" element={<Uncontrolled/>}/>
+        <Route path="login/Rhf" element={<Rhf/>}/>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
